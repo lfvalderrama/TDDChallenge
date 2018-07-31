@@ -12,7 +12,7 @@ namespace TDDChallenge
         
         private int[] QuickSort(int[] input, int first, int last)
         {
-            if (input.Length == 1)
+            if (input.Length == 1 || input.Length == 0)
             {
                 return input;
             }

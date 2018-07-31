@@ -38,9 +38,7 @@ namespace TDDChallenge_test
 
 
             //then
-            Assert.IsTrue(result[0] <= result[1]);
-            Assert.IsTrue(result[6] <= result[7]);
-            Assert.IsTrue(result[0] <= result[7]);
+            CollectionAssert.AreEqual(numbers, sortedNumbers);
         }
         #endregion
 
@@ -58,6 +56,23 @@ namespace TDDChallenge_test
 
             //then
             Assert.IsTrue(result.Length == sortedNumbers.Length);
+        }
+        #endregion
+
+        #region EmptyArray
+        [TestMethod]
+        public void SortArray_EmptyArray()
+        {
+            //Given
+            Challenge challenge = new Challenge();
+            int[] numbers = { };
+            int[] sortedNumbers = { };
+
+            //when
+            int[] result = challenge.SortArray(numbers);
+
+            //then
+            CollectionAssert.AreEqual(numbers, sortedNumbers);
         }
         #endregion
 
