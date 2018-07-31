@@ -36,6 +36,7 @@ namespace TDDChallenge_test
             //when
             int[] result = challenge.SortArray(numbers);
 
+
             //then
             Assert.IsTrue(result[0] <= result[1]);
             Assert.IsTrue(result[6] <= result[7]);
